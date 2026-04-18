@@ -13,6 +13,6 @@ export default defineConfig({
   },
 
   server: {
-    allowedHosts: ['https://webnova-ai.onrender.com'],
+    allowedHosts: ['webnova-ai.onrender.com'],
   },
 });
