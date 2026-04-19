@@ -15,8 +15,14 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased text-text-main overflow-hidden h-screen bg-[#fdfaf3];
+    /* ✅ FIXED */
+    @apply font-sans antialiased text-text-main min-h-screen bg-[#fdfaf3];
   }
+}
+
+/* Smooth scrolling (optional but good) */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Custom scrollbar */
@@ -30,7 +36,7 @@
   @apply bg-slate-200 rounded-full border-2 border-transparent bg-clip-padding hover:bg-slate-300;
 }
 
-/* Chat-specific scrollbar for better visibility */
+/* Chat-specific scrollbar */
 .chat-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
@@ -38,7 +44,7 @@
   @apply bg-indigo-200/50 hover:bg-primary/30;
 }
 
-/* Markdown styling within bubbles */
+/* Markdown styling */
 .prose {
   @apply max-w-none text-current;
 }
@@ -55,7 +61,7 @@
   @apply font-bold text-inherit;
 }
 
-/* Custom prose-invert for dark bubbles */
+/* Dark bubble text */
 .prose-invert {
   @apply text-white/90;
 }
@@ -66,10 +72,12 @@
   @apply text-white/80;
 }
 
+/* App container */
 .app-container-theme {
   @apply rounded-[24px] overflow-hidden bg-white shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)];
 }
 
+/* Background */
 .vibrant-bg {
   background: linear-gradient(135deg, #fdfaf3 0%, #fae8ff 40%, #f3e8ff 80%, #fae8ff 100%);
 }
